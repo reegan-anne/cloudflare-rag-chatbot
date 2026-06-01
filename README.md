@@ -9,6 +9,8 @@ Built with [Astro Starlight](https://starlight.astro.build/) for the docs site a
 [Cloudflare Worker](https://developers.cloudflare.com/workers/) for the chat API + static
 assets. The example brand is the fictional **Acme** — replace it with your own.
 
+![The Acme demo docs site with the embedded chat widget open, showing branded colors and suggested questions](assets/screenshot.png)
+
 > **Use this template** → click **Use this template** on GitHub (or fork it), then follow
 > the quickstart below.
 
