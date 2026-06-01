@@ -16,15 +16,7 @@ assets. The example brand is the fictional **Acme** — replace it with your own
 
 ## How it works
 
-```
-                          ┌──────────────────────────────────────────────┐
-  docs/*.md  ──ingest──▶  │  Cloudflare Vectorize  (embedded doc chunks)  │
-  (Workers AI embeddings) └──────────────────────────────────────────────┘
-                                              ▲  top-K match
-  visitor ──▶ widget.js ──POST /api/chat──▶ Worker ──┤
-                                              ▼  prompt + context
-                          Claude via Cloudflare AI Gateway ──▶ answer + sources
-```
+![Architecture: docs are chunked, embedded with Workers AI, and stored in Vectorize; at runtime the Worker retrieves the top-K chunks for a question and answers with Claude via AI Gateway](assets/architecture.png)
 
 1. **Ingest** (`npm run ingest`): walks `docs/**/*.{md,mdx}`, chunks each page, embeds the
    chunks with **Workers AI** (`@cf/baai/bge-large-en-v1.5`), and upserts them into
