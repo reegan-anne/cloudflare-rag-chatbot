@@ -1,0 +1,35 @@
+{
+  "name": "cloudflare-rag-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Open-source template for a documentation RAG chatbot on Cloudflare Workers — Astro Starlight docs site + embeddable AI chat widget powered by Workers AI, Vectorize, and Claude via AI Gateway.",
+  "scripts": {
+    "generate": "node scripts/gen-brand.mjs",
+    "predev": "node scripts/gen-brand.mjs",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "prebuild": "node scripts/gen-brand.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "wrangler:dev": "wrangler dev",
+    "deploy": "astro build && wrangler deploy",
+    "ingest": "tsx scripts/ingest.ts"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.30.0",
+    "astro": "^5.0.0",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240725.0",
+    "@types/markdown-it": "^14.1.2",
+    "globby": "^14.0.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0",
+    "tsx": "^4.19.2",
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "name": "Acme",
+    "assistantName": "Acme Docs Assistant",
+    "description": "Help docs for Acme — the all-in-one widget company.",
+    "siteUrl": "https://example.com"
+  },
+  "widget": {
+    "subtitle": "Powered by your docs",
+    "greeting": "Hi! Ask me about Acme.",
+    "blurb": "I can answer questions from the docs.",
+    "footer": "Answers come from the Acme docs.",
+    "placeholder": "Ask a question…",
+    "suggestedQuestions": [
+      "How do I get started?",
+      "How do I reset my password?",
+      "What plans are available?"
+    ]
+  },
+  "prompt": {
+    "persona": "You are the Acme Docs Assistant — a helpful, accurate guide to the Acme product.",
+    "audience": "You answer questions from Acme users and customers.",
+    "offTopicLabel": "Acme topics",
+    "fallbackHint": "contact support"
+  },
+  "colors": {
+    "primary": "#4f46e5",
+    "primaryDark": "#4338ca",
+    "accent": "#06b6d4",
+    "accentLight": "#a5b4fc",
+    "darkSurface": "#0b1020"
+  }
+}

@@ -1,0 +1,42 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "cloudflare-rag-chatbot",
+	"main": "src/worker/index.ts",
+	// account_id is read from your `wrangler login` session or CLOUDFLARE_ACCOUNT_ID.
+	// Uncomment and set it if you manage multiple accounts:
+	// "account_id": "<YOUR_CLOUDFLARE_ACCOUNT_ID>",
+	"compatibility_date": "2026-05-01",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS",
+		"not_found_handling": "404-page"
+	},
+	"ai": {
+		"binding": "AI",
+		"remote": true
+	},
+	"vectorize": [
+		{
+			"binding": "VECTORIZE",
+			// Must match the index you create with `wrangler vectorize create`.
+			"index_name": "cloudflare-rag-chatbot",
+			"remote": true
+		}
+	],
+	"vars": {
+		"EMBED_MODEL": "@cf/baai/bge-large-en-v1.5",
+		"EMBED_DIM": "1024",
+		"ANTHROPIC_MODEL": "claude-haiku-4-5",
+		// Your Cloudflare account ID and the AI Gateway name you created.
+		"AI_GATEWAY_ACCOUNT": "<YOUR_CLOUDFLARE_ACCOUNT_ID>",
+		"AI_GATEWAY_NAME": "cloudflare-rag-chatbot",
+		"TOP_K": "6"
+	},
+	"preview_urls": true,
+	"observability": {
+		"enabled": true
+	}
+}

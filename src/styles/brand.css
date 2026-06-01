@@ -1,0 +1,16 @@
+/* Structural brand styling for Starlight.
+ * Colors come from src/styles/brand-tokens.css (generated from chatbot.config.json).
+ * Edit the palette in chatbot.config.json, not here. */
+
+/* Accent border on the active sidebar item. */
+.sidebar-content a[aria-current='page'] {
+  border-left: 2px solid var(--brand-primary);
+}
+
+/* Gradient hero heading on the landing page. */
+.hero h1 {
+  background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

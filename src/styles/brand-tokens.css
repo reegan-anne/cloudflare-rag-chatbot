@@ -1,0 +1,20 @@
+/* GENERATED from chatbot.config.json by scripts/gen-brand.mjs — do not edit. */
+:root {
+  --brand-primary: #4f46e5;
+  --brand-primary-dark: #4338ca;
+  --brand-accent: #06b6d4;
+  --brand-accent-light: #a5b4fc;
+  --brand-dark-surface: #0b1020;
+
+  /* Starlight accent mapping (dark theme) */
+  --sl-color-accent-low: #4338ca;
+  --sl-color-accent: #4f46e5;
+  --sl-color-accent-high: #a5b4fc;
+  --sl-color-text-accent: #06b6d4;
+}
+:root[data-theme='light'] {
+  --sl-color-accent-low: #a5b4fc;
+  --sl-color-accent: #4f46e5;
+  --sl-color-accent-high: #4338ca;
+  --sl-color-text-accent: #4338ca;
+}

@@ -1,0 +1,6 @@
+<svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Acme">
+  <rect x="2" y="4" width="24" height="24" rx="7" fill="#4f46e5"/>
+  <path d="M8 13h12M8 18h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="22" cy="9" r="3" fill="#06b6d4"/>
+  <text x="34" y="22" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="700" fill="currentColor">Acme</text>
+</svg>

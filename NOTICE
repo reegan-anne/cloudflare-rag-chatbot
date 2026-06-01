@@ -1,0 +1,22 @@
+cloudflare-rag-chatbot
+Copyright (c) 2026 reegan-anne
+
+This project is licensed under the MIT License (see LICENSE).
+
+---
+
+Portions of the RAG pipeline — the document chunker, retriever, system-prompt
+skeleton, and the ingest file-walking/batching layout — are derived from:
+
+  rootsongjc/rag-chatbot  (https://github.com/rootsongjc/rag-chatbot)
+  Licensed under the Apache License, Version 2.0.
+
+  You may obtain a copy of the Apache License at:
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Those parts have been substantially adapted: the embedding and generation
+providers were replaced with Cloudflare Workers AI for embeddings and
+Anthropic Claude via Cloudflare AI Gateway for chat, bilingual logic was
+removed, the prompt/branding was made configuration-driven, and a new
+embeddable widget UI was added. See the upstream repository for its original
+NOTICE and license terms.
